@@ -4,11 +4,17 @@
 
 ## 🚀 전시 관람하기
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e1666993-c828-4202-9214-4328b1a437c3/deploy-status)](https://app.netlify.com/sites/firstexhibition/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/55e1e8ce-6887-45cf-b653-42c8e4fa525a/deploy-status)](https://app.netlify.com/projects/firstexhibition/deploys)
+
+
 
 [전시회 바로가기](https://firstexhibition.netlify.app/)
 
+
+
 ![QR Code](qrcode_image_600.png)
+
+
 
 ## 🎨 전시 소개
 
