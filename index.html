@@ -14,6 +14,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
+    <style>
+        #intro video.loading {
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,7 +30,7 @@
 
         <!-- 페이지 2: 전시회 소개 -->
         <section class="page" id="intro">
-            <video controls autoplay loop muted playsinline>
+            <video controls autoplay loop muted playsinline preload="auto" poster="exhibition-page/assets/card1.jpg" class="loading">
                 <source src="exhibition-page/assets/video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -161,6 +166,14 @@
             </div>
         </section>
     </div>
+    <script>
+        const video = document.querySelector('#intro video');
+        if (video) {
+            video.addEventListener('canplay', function() {
+                video.classList.remove('loading');
+            });
+        }
+    </script>
 </body>
 
 </html>
