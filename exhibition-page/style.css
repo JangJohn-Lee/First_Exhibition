@@ -206,7 +206,7 @@ body, html {
     margin-top: 10px;
 }
 
-.instagram-link, .naver-link {
+.instagram-link, .naver-link, .copy-link, .kakao-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,16 +215,23 @@ body, html {
     color: white;
     text-decoration: none;
     border-radius: 50%; /* 원형 버튼으로 변경 */
-    transition: transform 0.3s;
+    transition: transform 0.3s ease; /* 부드러운 전환 효과 */
     text-shadow: none;
+    overflow: hidden; /* 이미지가 버튼 밖으로 나가지 않도록 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 입체감 추가 */
 }
 
-.instagram-link:hover, .naver-link:hover {
-    transform: scale(1.1); /* 호버 효과 약간 더 강조 */
+.instagram-link:hover, .naver-link:hover, .copy-link:hover, .kakao-btn:hover {
+    transform: scale(1.15); /* 호버 효과 약간 더 강조 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* 호버 시 그림자 강조 */
 }
 
 .instagram-link {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.copy-link {
+    background: linear-gradient(45deg, #6a82fb, #3c57c8); /* Awesome gradient for copy link */
 }
 
 .naver-link {
@@ -236,9 +243,15 @@ body, html {
     width: auto;
 }
 
-.instagram-link i {
+.instagram-link i, .copy-link i {
     margin-right: 0; /* 아이콘 여백 제거 */
     font-size: 1.5em; /* 아이콘 크기 조정 */
+}
+
+.kakao-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 버튼에 꽉 차도록 */
 }
 
 /* Artist details container for vertical layout */
