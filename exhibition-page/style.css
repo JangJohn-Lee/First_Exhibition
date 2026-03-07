@@ -78,6 +78,17 @@ body, html {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 비디오 위 텍스트는 그림자 유지 */
 }
 
+#intro video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 1;
+}
+
 
 /* 작품 및 작가소개 페이지 배경 */
 #artwork-1, #artwork-2, #artwork-3, #artwork-4, #artwork-5, #artwork-6, #artwork-7, #artist {
@@ -182,6 +193,7 @@ body, html {
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #ddd;
+    line-height: 1.8;
 }
 
 .artist-content h2 {
