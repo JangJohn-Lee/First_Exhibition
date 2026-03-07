@@ -207,18 +207,19 @@
             content: {
                 title: '윤종란 개인전: 고향의 봄',
                 description: '87세 할머니가 새벽 2시, 그리운 기억을 담아 그린 전시회에 초대합니다.',
-                imageUrl: 'https://firstexhibition.netlify.app/exhibition-page/assets/card1.jpg', // 공유될 때 보일 이미지
+                imageUrl: 'https://firstexhibition.netlify.app/exhibition-page/assets/card1.jpg',
                 link: {
-                    mobileWebUrl: window.location.href,
-                    webUrl: window.location.href,
+                    // 이미지의 설정과 똑같이 '/' 없이 맞춰줍니다.
+                    mobileWebUrl: 'https://firstexhibition.netlify.app',
+                    webUrl: 'https://firstexhibition.netlify.app',
                 },
             },
             buttons: [
                 {
                     title: '전시회 관람하기',
                     link: {
-                        mobileWebUrl: window.location.href,
-                        webUrl: window.location.href,
+                        mobileWebUrl: 'https://firstexhibition.netlify.app',
+                        webUrl: 'https://firstexhibition.netlify.app',
                     },
                 },
             ],
@@ -227,7 +228,7 @@
         // 주소 복사 함수
         function copyURL() {
             // 해쉬값이나 상세 경로 제외하고 메인 주소만 지정
-            const exhibitionURL = "https://firstexhibition.netlify.app/";
+            const exhibitionURL = "https://firstexhibition.netlify.app";
 
             navigator.clipboard.writeText(exhibitionURL).then(() => {
                 alert("전시회 주소가 복사되었습니다. 마음을 전하고 싶은 분께 전달해 보세요!");
