@@ -30,7 +30,7 @@
 
         <!-- 페이지 2: 전시회 소개 -->
         <section class="page" id="intro">
-            <video controls autoplay loop muted playsinline preload="auto" poster="exhibition-page/assets/card1.jpg" class="loading">
+            <video autoplay loop muted playsinline preload="auto" poster="exhibition-page/assets/video_intro.jpg" class="loading">
                 <source src="exhibition-page/assets/video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -166,14 +166,24 @@
             </div>
         </section>
     </div>
-    <script>
-        const video = document.querySelector('#intro video');
-        if (video) {
-            video.addEventListener('canplay', function() {
-                video.classList.remove('loading');
+<script>
+    const video = document.querySelector('#intro video');
+    if (video) {
+        // 1. 영상 로드 완료 시 클래스 제거
+        video.addEventListener('canplay', function() {
+            video.classList.remove('loading');
+        });
+
+        // 2. 브라우저 정책으로 인한 자동재생 차단 방지 (강제 실행)
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                // 자동 재생이 막혔을 경우 콘솔에 알림 (필요 시 사용자 클릭 유도 로직 추가 가능)
+                console.log("Autoplay prevented:", error);
             });
         }
-    </script>
+    }
+</script>
 </body>
 
 </html>
